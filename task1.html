@@ -26,6 +26,18 @@
         border: 1px solid;
         text-align: justify;
       }
+      form input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 60%;
+      }
+      textarea {
+        vertical-align: middle;
+      }
+      label {
+        display: inline-block;
+        width: 200px;
+      }
     </style>
   </head>
   <body>
@@ -91,6 +103,37 @@
           <a href="#">quantum information</a> science.
         </div>
       </article>
+      <h2>Application Web Form</h2>
+      <form action="">
+        <div>
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Maximum 100 Character"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="address">Address</label>
+          <textarea name="address" id="" rows="5"></textarea>
+        </div>
+        <br />
+        <div>
+          <label for="gender">Gender</label>
+          <input type="radio" name="gender" />Male
+          <input type="radio" name="gender" />Female
+        </div>
+        <br />
+        <div>
+          <label>Major</label>
+          <input type="checkbox" name="ai" />AI
+          <input type="checkbox" name="software" />Software
+          <input type="checkbox" name="networking" />Networking
+        </div>
+        <br />
+      </form>
     </div>
   </body>
 </html>
