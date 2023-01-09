@@ -7,7 +7,7 @@
     <title>Task 1 - Hasib Muhammad</title>
     <style>
       .container {
-        margin: 0 3rem;
+        margin: 0 5rem;
       }
       .center {
         text-align: center;
@@ -28,8 +28,11 @@
       }
       form input[type="text"],
       input[type="email"],
-      textarea {
+      textarea,
+      select,
+      input[type="date"] {
         width: 60%;
+        padding: 0.3rem;
       }
       textarea {
         vertical-align: middle;
@@ -37,6 +40,42 @@
       label {
         display: inline-block;
         width: 200px;
+      }
+      .message {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightblue;
+        padding: 0 0.8rem;
+        border-radius: 5px;
+        color: green;
+      }
+      .message span {
+        cursor: pointer;
+      }
+      .custom::-webkit-file-upload-button {
+        display: none;
+      }
+      .custom::before {
+        content: "Browse File";
+        display: inline-block;
+        background: linear-gradient(rgb(2, 62, 212), rgb(82, 100, 128));
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        color: #fff;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+      .custom {
+        color: transparent;
+      }
+      .btn-submit {
+        padding: 0.5rem 1rem;
+        color: #fff;
+        background-color: green;
+        border-radius: 5px;
+        border: none;
       }
     </style>
   </head>
@@ -127,12 +166,40 @@
         </div>
         <br />
         <div>
+          <label>Department</label>
+          <select name="department">
+            <option value="cse">CSE</option>
+            <option value="eee">EEE</option>
+            <option value="civil">CIVIL</option>
+          </select>
+        </div>
+        <br />
+        <div>
           <label>Major</label>
           <input type="checkbox" name="ai" />AI
           <input type="checkbox" name="software" />Software
           <input type="checkbox" name="networking" />Networking
         </div>
         <br />
+        <div>
+          <label>Reg. Date</label>
+          <input type="date" name="reg" />
+        </div>
+        <br />
+        <div class="message">
+          <p>
+            Information: The file upload is just simulated in the preview. No
+            file is really uploaded.
+          </p>
+          <span>X</span>
+        </div>
+        <br />
+        <div>
+          <label>Photo</label>
+          <input class="custom" type="file" title="" name="photo" />
+        </div>
+        <br />
+        <button class="btn-submit" type="submit">Enter</button>
       </form>
     </div>
   </body>
